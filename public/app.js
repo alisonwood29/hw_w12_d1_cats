@@ -9,14 +9,14 @@ const addCat = function (name, favFood, image){
   const favFoodListItem = document.createElement("li");
   favFoodListItem.innerText = "Favourite food: " + favFood;
 
-  const imageItem = document.createElement("img");
-  imageItem.width = 500;
-  imageItem.src = image;
+  // const imageItem = document.createElement("img");
+  // imageItem.width = 500;
+  // imageItem.src = image;
 
   const imageListItem = document.createElement("li");
-  imageListItem.innerText = imageItem;
+  imageListItem.innerHTML = '<img width="500" src="'+ image + '">';
 
-  imageListItem.appendChild(imageItem);
+  // imageItem.appendChild(imageListItem);
   favFoodListItem.appendChild(imageListItem);
   nameListItem.appendChild(favFoodListItem);
   catListItem.appendChild(nameListItem);
