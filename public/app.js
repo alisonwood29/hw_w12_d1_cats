@@ -16,8 +16,13 @@ const addCat = function (name, favFood, image){
   const favFoodListItem = document.createElement("li");
   favFoodListItem.innerText = "Favourite food: " + favFood;
 
-  const imageListItem = document.createElement("li");
-  imageListItem.innerHTML = '<img width="500" src="'+ image + '">';
+  // const imageListItem = document.createElement("li");
+  // imageListItem.innerHTML = '<img width="500" src="'+ image + '">';
+  const img = document.createElement('img');
+  const imageListItem = document.createElement('li');
+  img.width = "500";
+  img.src = image;
+  imageListItem.appendChild(img);
 
   favFoodListItem.appendChild(imageListItem);
   nameListItem.appendChild(favFoodListItem);
